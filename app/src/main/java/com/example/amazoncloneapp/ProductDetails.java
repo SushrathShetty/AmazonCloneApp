@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-import com.example.amazoncloneapp.MenuFiles.CartActivity;
-import com.example.amazoncloneapp.MenuFiles.SearchActivity;
+
 import com.example.amazoncloneapp.model.AddProdModel;
 import com.example.amazoncloneapp.viewholder.RelatedProductsHolder;
-import com.example.amazoncloneapp.viewholder.ViewProductsHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -32,7 +29,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -43,7 +39,7 @@ public class ProductDetails extends AppCompatActivity {
     Intent intent;
     ImageView productImg;
     TextView productName, productCategory, productDesc, productPrice;
-    AppCompatButton order;
+    AppCompatButton order,favorite; //fav
     Toolbar detailsToolbar;
 
     FirebaseAuth auth;
@@ -72,6 +68,7 @@ public class ProductDetails extends AppCompatActivity {
 
         back=findViewById(R.id.product_back);
         order=findViewById(R.id.order);
+        //favorite=findViewById(R.id.favorite); //extra
 
         related_prod_list = findViewById(R.id.related_prod_list);
         related_prod_list.setLayoutManager(new LinearLayoutManager(ProductDetails.this,LinearLayoutManager.HORIZONTAL,true));
@@ -163,7 +160,6 @@ public class ProductDetails extends AppCompatActivity {
                     }
                 });
     }
-
 
     @Override
     protected void onStart() {

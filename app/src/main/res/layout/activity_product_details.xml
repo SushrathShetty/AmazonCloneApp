@@ -149,7 +149,22 @@
                 android:layout_marginBottom="30dp"
                 android:textColor="@color/black"
                 android:textSize="18dp"/>
-
+            <!-- extra
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="#FFE719"
+                android:text="Add to Favorites"
+                android:fontFamily="sans-serif"
+                android:textAllCaps="false"
+                android:elevation="50dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/favorite"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+            till here-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -47,7 +47,7 @@ public class ProfileActivity extends BaseActivity {
     ImageView back,done;
     ImageView profileImg;
     EditText profileUsername;
-    TextView profileEmail, profileLogout, profileHistory, displayUsername;
+    TextView profileEmail, profileLogout, profileHistory, displayUsername,favorite;
 
     String emailid;
 
@@ -95,6 +95,7 @@ public class ProfileActivity extends BaseActivity {
         profileEmail=findViewById(R.id.profileEmail);
         profileLogout=findViewById(R.id.profileLogout);
         profileHistory=findViewById(R.id.profileHistory);
+        //favorite=findViewById(R.id.favorite);
         displayUsername=findViewById(R.id.displayUsername);
 
         auth=FirebaseAuth.getInstance();
@@ -141,6 +142,8 @@ public class ProfileActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
 
         done.setOnClickListener(new View.OnClickListener() {
             @Override

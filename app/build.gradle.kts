@@ -62,4 +62,9 @@ dependencies {
     implementation("com.razorpay:checkout:1.6.36")
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.6.0-alpha02")
 
+    //location
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+
+
+
 }

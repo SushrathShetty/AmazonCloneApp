@@ -1,32 +1,23 @@
 package com.example.amazoncloneapp;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 import android.widget.Toolbar;
 
-import com.example.amazoncloneapp.MenuFiles.CartActivity;
+
 import com.example.amazoncloneapp.MenuFiles.ProfileActivity;
-import com.example.amazoncloneapp.MenuFiles.SearchActivity;
-import com.example.amazoncloneapp.model.Cart;
 import com.example.amazoncloneapp.model.Orders;
-import com.example.amazoncloneapp.viewholder.CartViewHolder;
 import com.example.amazoncloneapp.viewholder.OrdersViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
